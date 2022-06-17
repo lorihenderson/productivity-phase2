@@ -5,9 +5,9 @@ function App() {
 
 
   useEffect(() => {
-    fetch("http://localhost:8000/posts/")
+    fetch("http://localhost:8000/toys")
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data => console.log("this is my", (data)))
   },[])
   
   return (
