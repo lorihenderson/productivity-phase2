@@ -5,7 +5,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch("http://localhost:8000/toys")
+    fetch("http://localhost:8000/title")
       .then(response => response.json())
       .then(data => console.log("this is my", (data)))
   },[])
