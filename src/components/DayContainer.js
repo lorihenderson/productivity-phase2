@@ -1,9 +1,9 @@
 import React from 'react';
 import Days from './Days'
-import {Card} from 'react-bootstrap'
+import {Card, CardGroup } from 'react-bootstrap'
 
 
-function DayContainer() {
+const DayContainer = () => {
 
 const daysInfo = [
     { day: "Sunday", date:"1"},
@@ -19,7 +19,8 @@ return (
 
     <>
     <div> DAY CONTAINER
-    <Card style={{ width: '18rem' }} key={index}>
+    <CardGroup>
+    <Card key={index}>
     <Card.Body>
     <Card.Title>{week.day}</Card.Title>
     <Card.Subtitle className="mb-2 text-muted">{week.date}</Card.Subtitle>
@@ -28,13 +29,15 @@ return (
       the card's content.
     </Card.Text>
     </Card.Body>
-    </Card>
+    </Card></CardGroup>
     </div>
     </>
-
-
 )
 }
+
+return <div>
+    {daysInfo.map(renderDays)}
+</div>
 }
 
 export default DayContainer;
