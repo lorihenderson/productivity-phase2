@@ -33,13 +33,24 @@ body {
   color: aliceblue;
 }
 
+.add-task {
+  padding: 5px 20px;
+}
+
+.add-tast fieldset {
+  margin: 20px 0;
+}
+
 button:hover {
-  background-color: green;
+  background-color: rgb(80, 95, 99);
 }
 
 .colormebutton {
   color: #F1D2B6 !important;
 }
+
+
+
 /* 
 .dropdown {
   float: left;

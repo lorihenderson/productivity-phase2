@@ -1,28 +1,31 @@
-import React, { useState } from 'react';
-import { DropdownButton, Dropdown } from 'react-bootstrap'
+import React from 'react';
 
-function TasksForm ( {taskValue} ) {
-const [task, setTask] = useState("")
 
-function handleTask(event){
-    setTask(taskValue)
-}
-console.log(handleTask)
+function TasksForm() {
+    const handleSubmit = event => {
+        event.preventDefault();
+        alert('You have submitted your task!!')
+    }
+
+
+
+
 return (
         <>
-        <div class="dropdown-content">ADD A TASK 
-        <form>       
-        <input type="text" onChange={handleTask} value={task}></input>
-        </form><button type="submit"> Add</button>
-        {/* <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-        <Dropdown.Item href="#/Monday-1">Monday</Dropdown.Item>
-        <Dropdown.Item href="#/Tuesday-2">Tuesday</Dropdown.Item>
-        <Dropdown.Item href="#/Wednesday-3">Wednesday</Dropdown.Item>
-        </DropdownButton> */}
+        <div className="add-task">
+            <form onSubmit={handleSubmit}>
+                <fieldset>
+                    <label>
+                        <p>Add A Task</p>
+                        <input text="text" />
+                    </label>
+                </fieldset>
+                <button type="submit">Add</button>
+            </form>
         </div>
         </>
 )
-
 }
+
 
 export default TasksForm;
