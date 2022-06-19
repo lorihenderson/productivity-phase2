@@ -1,5 +1,5 @@
 import React from 'react';
-import Days from './Days'
+// import Days from './Days'
 import {Card, CardGroup } from 'react-bootstrap'
 
 
@@ -25,8 +25,7 @@ return (
     <Card.Title>{week.day}</Card.Title>
     <Card.Subtitle className="mb-2 text-muted">{week.date}</Card.Subtitle>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      Text
     </Card.Text>
     </Card.Body>
     </Card></CardGroup>

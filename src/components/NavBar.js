@@ -1,8 +1,8 @@
 import React from 'react';
 import TasksForm from './TasksForm'
 import SpecialEventsForm from './SpecialEventsForm'
-import Reminders from './Reminders'
-import Holidays from './Holidays'
+// import Reminders from './Reminders'
+// import Holidays from './Holidays'
 
 // import {
 //     Switch,
@@ -10,9 +10,9 @@ import Holidays from './Holidays'
 //     Link
 //   } from "react-router-dom";
 
-import {Button} from 'react-bootstrap'
+// import {Button} from 'react-bootstrap'
 
-function NavBar( {taskValue} ) {
+function NavBar( {taskValue, onAddTask} ) {
 
 
 
@@ -21,10 +21,12 @@ function NavBar( {taskValue} ) {
 return (
         <>
         <div>
-        <Button variant="info"size="lg" className="colormebutton">TASKS</Button>
+        <TasksForm onAddTask={onAddTask} taskValue={taskValue} />
+        <SpecialEventsForm/>
+        {/* <Button variant="info"size="lg" className="colormebutton">TASKS</Button>
         <Button variant="info"size="lg" className="colormebutton">SPECIAL EVENTS</Button>
         <Button variant="info"size="lg" className="colormebutton">REMINDERS</Button>
-        <TasksForm taskValue={taskValue}/>
+         */}
         {/* <nav>
               <Button variant="info"size="lg" className="colormebutton"><Link to='/TasksForm'> TasksForm</Link></Button>
               <Button variant="info" size="lg"><Link className="buttons" to='/SpecialEventsForm'>SpecialEventsForm</Link></Button>
