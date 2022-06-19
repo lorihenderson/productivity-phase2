@@ -1,33 +1,41 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';
-import Calendar from 'react-calendar'
-import 'react-calendar/dist/Calendar.css';
-import moment from 'moment'
-import Header from './components/Header'
+import React, { useState, useEffect} from 'react';
+import Holidays from './components/Holidays'
+import DayContainer from './components/DayContainer'
+import HolidayContainer from './components/HolidayContainer'
+import TasksForm from './components/TasksForm'
+import SpecialEventsForm from './components/SpecialEventsForm'
+import Reminders from './components/Reminders'
+import NavBar from './components/NavBar'
 
-function App() {
+import {
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-  const [dateState, setDateState] = useState(new Date())
-  const changeDate = (e) => {
-    setDateState(e)
-  }
-  
+export default function App() {
+
+  const [holidays, setHolidays] = useState([])
+
   useEffect(() => {
-    fetch("http://localhost:8000/holidays")
-    .then(response => response.json())
-    .then(data => console.log("this is my", (data)))
+      fetch("http://localhost:3000/holidays")
+          .then(response => response.json())
+          .then(data => setHolidays(data))
   },[])
   
+  
+
   return (
-    <>
-      <Header />
-      <Calendar 
-      value={dateState}
-      onChange={changeDate}
-      />
-    <p>Current selected date is <b>{moment(dateState).format('MMMM Do YYYY')}</b></p>
-    </>
+    
+      <div>
+        <NavBar/>
+        <DayContainer />
+        <HolidayContainer holidays={holidays} />
+      
+    </div>
   );
 }
 
-export default App;
+
+
