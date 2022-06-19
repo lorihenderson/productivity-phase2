@@ -36,44 +36,53 @@ body {
 button:hover {
   background-color: green;
 }
+
+.colormebutton {
+  color: #F1D2B6 !important;
+}
 /* 
-button {
-  padding: 0.5rem 0.75rem;
+.dropdown {
+  float: left;
+  overflow: hidden;
+} */
+
+/* Dropdown button */
+/* .dropdown .dropbtn {
+  font-size: 16px;
   border: none;
-  font: inherit;
-  font-weight: 600;
-  color: inherit;
-  cursor: pointer;
-  color: var(--primary);
-  background-color: var(--background);
-  border: 2px solid var(--dark-turquoise);
-  transition: background-color 0.2s;
-}
-
-button.active,
-button:focus,
-button:hover {
   outline: none;
-  color: var(--white);
-  background-color: var(--primary);
-  border: 2px solid var(--primary);
-}
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  /* margin: 0; /* Important for vertical align on mobile phones */
 
-button:disabled {
-  cursor: not-allowed;
-  color: var(--dark-grey);
-  background-color: var(--grey);
-}
+/* Dropdown content (hidden by default) */
+/* .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+} */
 
-button.blue {
-  border: 2px solid var(--blue-dark);
-  color: var(--blue);
-}
+/* Links inside the dropdown */
+/* .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+} */
 
-button.blue.active,
-button.blue:focus,
-button.blue:hover {
-  color: var(--white);
-  background-color: var(--blue);
-  border: 2px solid var(--blue);
+/* Add a grey background color to dropdown links on hover */
+/* .dropdown-content a:hover {
+  background-color: #ddd;
+} */
+
+/* Show the dropdown menu on hover */
+/* .dropdown:hover .dropdown-content {
+  display: block;
 } */

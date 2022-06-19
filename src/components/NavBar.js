@@ -4,13 +4,15 @@ import SpecialEventsForm from './SpecialEventsForm'
 import Reminders from './Reminders'
 import Holidays from './Holidays'
 
-import {
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+// import {
+//     Switch,
+//     Route,
+//     Link
+//   } from "react-router-dom";
 
-function NavBar( ) {
+import {Button} from 'react-bootstrap'
+
+function NavBar( {taskValue} ) {
 
 
 
@@ -19,16 +21,20 @@ function NavBar( ) {
 return (
         <>
         <div>
-        <nav>
-              <Link className="button" to='/TasksForm'>TasksForm</Link>
-              <Link className="button" to='/SpecialEventsForm'>SpecialEventsForm</Link>
-              <Link className="button" to='/Reminders'>Reminders</Link>
-              <Link className="button" to='/Holidays'>Holidays</Link>
+        <Button variant="info"size="lg" className="colormebutton">TASKS</Button>
+        <Button variant="info"size="lg" className="colormebutton">SPECIAL EVENTS</Button>
+        <Button variant="info"size="lg" className="colormebutton">REMINDERS</Button>
+        <TasksForm taskValue={taskValue}/>
+        {/* <nav>
+              <Button variant="info"size="lg" className="colormebutton"><Link to='/TasksForm'> TasksForm</Link></Button>
+              <Button variant="info" size="lg"><Link className="buttons" to='/SpecialEventsForm'>SpecialEventsForm</Link></Button>
+              <Button variant="info" size="lg"><Link className="buttons" to='/Reminders'>Reminders</Link></Button>
+              <Button variant="info" size="lg"><Link className="buttons" to='/Holidays'>Holidays</Link></Button>
         </nav>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-        <Switch>
+        {/* <Switch>
           <Route path="/TasksForm">
             <TasksForm />
           </Route>
@@ -41,8 +47,8 @@ return (
           <Route path="/Holidays">
             <Holidays />
           </Route>
-        </Switch>
-            
+        </Switch> */}
+             
         </div>
         </>
 )

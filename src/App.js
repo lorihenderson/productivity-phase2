@@ -8,15 +8,11 @@ import SpecialEventsForm from './components/SpecialEventsForm'
 import Reminders from './components/Reminders'
 import NavBar from './components/NavBar'
 
-import {
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
 
 export default function App() {
 
   const [holidays, setHolidays] = useState([])
+  const [taskValue, setTaskValue] = useState("")
 
   useEffect(() => {
       fetch("http://localhost:3000/holidays")
@@ -29,7 +25,7 @@ export default function App() {
   return (
     
       <div>
-        <NavBar/>
+        <NavBar taskValue={taskValue}/>
         <DayContainer />
         <HolidayContainer holidays={holidays} />
       

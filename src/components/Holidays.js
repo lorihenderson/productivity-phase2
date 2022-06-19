@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Button } from 'react-bootstrap'
 
 
 function Holidays( { holiday } ) {
@@ -10,8 +10,8 @@ return(
     <div
       className="holidayscard"
       key={holiday.id}
-      onClick={() => console.log("HELLO")}
-    > <button className="holidaybutton">
+      onClick={() => console.log("HELLO")}>
+     <Button variant="primary" size="lg">
       <div className="content">
         <div className="header">
           {holiday.name}
@@ -19,7 +19,7 @@ return(
       </div>
         <span>
           {holiday.date}
-        </span></button>
+        </span></Button>
       </div>
     </div>
 
